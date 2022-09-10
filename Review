@@ -1,0 +1,88 @@
+Internet of Things for Smart Cities 
+
+IEEE Style Citation A. Zanella, N. Bui, A. Castellani, L. Vangelista and M. Zorzi, "Internet of Things for Smart Cities," in IEEE Internet of Things Journal, vol. 1, no. 1, pp. 22-32, Feb. 2014, doi: 10.1109/JIOT.2014.2306328. 
+Keyword Urban areas, Smart buildings, Monitoring, Smart homes, Business, IEEE 802.15 Standards 
+Original URL Link https://ieeexplore.ieee.org/document/6740844 
+
+Introduction 
+As a recent communication paradigm, IoT grants connections between various devices to foster the 
+growth of smart cities. On the flip side, however, this heterogeneous field is facing serious challenges 
+about finding unified models to fulfill any possible application scenarios, which could cause 
+incompetence regarding the process of proliferation and solving technical problems. To offer a solution 
+for this complexity, this paper focus on the application of the IoT paradigm to an urban context, and 
+specifically, adopting ICT approaches to achieve the concept of Smart City. The paper discusses a general 
+reference framework for the design of an urban IoT. It lists obstacles with possible solutions and 
+overviews services enabled in Smart City domain. Furthermore, it shows an urban IoT architecture design 
+and presents a practical implementation at last.
+
+Obstacles and Services in Smart City 
+Smart City has a decent amount of market share, but it’s still in the early stage of market development 
+for being hindered from the perspectives of political, technical, and financial barriers. From political 
+view, attribution of discretion is a problem. Possible solutions could be institutionalizing the entire 
+decision and execution process, converging strategic planning and management of the smart city into a 
+single, dedicated department. As for technical aspect, troubles involve non-interoperability of the 
+heterogeneous technologies in city and urban developments. Remediation relates to realizing a unified 
+urban-scale ICT platform. In financial side, a clear business model is lacking under the influence of 
+global economy. A potential way out of this obstacle is to first develop services with clear return on 
+investment and then to catalyze other added-valve services. 
+Services enabled by Smart City could potentially realize the win-win situation for citizens and the 
+economy, including structural health of buildings, waste management, smart lighting, etc. Smart lighting, 
+which is a service to optimize the efficiency of street lighting, is stressed in experimental study.
+
+Urban IoT Architecture 
+The authors think the services in Smart City are based on a centralized architecture, where the peripheral 
+devices transfer data to a control center through suitable communication technologies. To describe this 
+architecture in detail, they divide these components into 3 parts: web service approach, link layer 
+technologies and devices. In the rest of the sections, IoT devices and technologies are usually 
+distinguished as unconstrained, which refers to those regular components commonly used in 
+communication, or constrained, which refers to those nodes with limited resources or technologies with 
+low complexity. 
+For the web service approach, 6 protocols are mentioned in 3 functional layers. In the layer of data format, 
+EXI format is proposed since the size of XML messages is too large and complex for constrained devices. 
+An entity of EXI is encoded from an XML message. It allows constrained devices to support and generate 
+messages compatible with XML and its processor can be easily integrated in constrained devices. In the 
+application and transport layers, HTTP is too verbose and complex, and TCP is not suitable for the 
+environments of constrained devices. These problems can be solved by using CoAP protocol over UDP, 
+which transports binary format and can easily interoperate with HTTP. In the network layer, 6LoWPAN, 
+which is a compression format for IPv6 and UDP headers over constrained networks, is adopted for 
+constrained nodes. To address a IPv6 host for IPv4-only hosts, the authors present 3 approaches: v4/v6 
+Port Address Translation, v4/v6 Domain Name Conversion and URI mapping. 
+Link layer technologies are classified into unconstrained and constrained technologies. The 
+unconstrained technologies are all traditional communication technologies whose characteristics are high 
+reliability, low latency, high transfer rate but also high complexity and energy consumption. The 
+constrained technologies are those technologies characterized by low energy consumption and low 
+transfer rates. 
+In the part of devices, 3 types of devices are described. Backend servers are responsible for collecting, 
+storing and processing data for useful information. Gateways interconnect the end devices to the main 
+communication infrastructure, providing protocol translation and functional mapping. IoT peripheral 
+nodes are the end devices producing data.
+
+Padova Smart City 
+The conceptual architecture proposed by this paper has successfully applied to the city of Padova, Italy. 
+Both configuration details and observations after applying are given in this section. 
+This practical application consists of a system for collecting environmental data and monitoring the 
+public street lighting. It can be divided into six parts including both hardware and software. Street lights, 
+which are geographically localized in the city, are utilized in this system. Each street light is attached 
+with a unique IoT node. And each IoT node is further equipped with sensors of different functions, like 
+temperature sensor, humidity sensor and benzene sensor. Then, constrained technologies like IEEE 
+802.15.4 enable nodes to transfer data collected to a sink node. All nodes can be individually accessed 
+from anywhere using the Internet through IPV6/6LoWPAN. In addition, WSN gateway provides an 
+interface between backend servers and the sensor clouds. It also works as the sink node for sensors. 
+Besides, HTTP-CoAP proxy in this urban example is collocated on the switchboard gateway. It enables 
+communications with CoAP devices, which can be further described as to monitor applications and limit 
+the amount of traffic in the IoT peripheral networks. Moreover, database server in this system is 
+embedded in the WSN gateway. All data collected are stored in it in time and data inside it can be 
+visualized or exported. At last, to optimize the maintenance plan, operator that able to locate the street 
+light and tissue commands is embedded in mobile devices. 
+A seven-day observation is visualized into plot with respects to the data collected in terms of temperature, 
+humidity, light intensity and benzene level. And through these records, different patterns for different 
+environmental factors are observed. Moreover, the combination of the sensed data at the same time can 
+reflects the weather information. 
+
+Conclusion 
+From reading this paper, we go through the basic services that can be enabled in smart cities and get 
+familiar with the obstacles in urban IoT domain from different dismensions. Besides, the proposed 
+architecture gives us a comprehensive view of the urban IoT infrastructure from technical perspective. 
+Then the experimental application in this paper verified the feasibility of its conceptual architecture. And 
+from this practical application, we intuitively understand the interconnections among different 
+components. 
